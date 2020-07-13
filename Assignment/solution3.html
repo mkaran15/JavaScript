@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Assignment</title>
+    </head>
+    <body>
+        <h1 style="text-align: center; font-size: 40px; font-family: Arial;">Assignment Solution 3</h1>
+        <script>
+            var today = new Date();
+            var dd = today.getDate();
+            if(dd < 10){
+                dd = "0" + dd;
+            }
+            var mm = today.getMonth() + 1;
+            if(mm < 10){
+                mm = "0" + mm;
+            }
+            var yyyy = today.getFullYear();
+            document.write(mm + "-" + dd + "-" + yyyy);
+            document.write("<br />");
+            document.write(mm + "/" + dd + "/" + yyyy);
+            document.write("<br />");
+            document.write(dd + "-" + mm + "-" + yyyy);
+            document.write("<br />");
+            document.write(dd + "/" + mm + "/" + yyyy);
+        </script>
+    </body>
+</html>
