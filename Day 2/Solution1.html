@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>Solution 1</title>
+    </head>
+    <body>
+        <h1 style="text-align: center; font-family:Arial;">Console Objects</h1>
+        <script>
+            /* 1. console.log() :- Outputs a message to the console. */
+            console.log("1. This operation is successful."); // This will print "1. This operation is successful "  in the console.
+
+            /* console.info() :- Outputs an informational message to the console. */
+            console.info("This is info!"); //will display "this is info" as an information.
+
+            /* console.warn():- Outputs a warning message to the console.*/
+            console.warn("Lookout!"); //will display "Lookout!" as a warning.
+
+            /* console.error() :- Outputs an error meesage to the console. */
+            console.error("Something went wrong.") //display message in danger color.
+
+            /*console.trace() :- Outputs a stack trace to the console.*/
+            function hello(name  = "Karan"){
+                console.trace("Name: ", name);
+                return `Hello ${name}`;
+            }
+            hello();
+
+            /*console.assert() :- Writes an error message to the console if the assertion is false. */
+            console.assert(2==2,'This is correct'); //display no message
+            console.assert(1==2,'This is wrong'); //Will  display message
+
+            /* console.count() :- Logs the number of times that this particular call to count has been called.*/
+            console.count("Count Number"); //Count Number: 1
+            console.count("Count Number"); //Count Number: 2
+            console.count("Count Number"); //Count Number: 3
+            console.count("Count Number"); //Count Number: 4
+
+            /*console.group() :- Creates a new inline group in the console. This indents following console message by an additional level, until console.groupEnd() is called.
+            
+            console.groupEnd() :- Exits the current inline group in the console. */
+
+            console.group("Names");
+                console.log("Karan");
+                console.log("Milind");
+            console.group("Roll Number");
+                console.log("1618731028");
+                console.log("1618731038");
+            console.groupEnd();
+                console.log("Uttkarsh");
+            console.groupEnd();
+
+            /*console.table() :- Display tabular data as a table */
+            var information={
+                Name:"Karan",
+                Age:23,
+                Email:"xyz@gmail.com"
+            }
+            console.table(information);
+
+            /* console.time() :- Starts a timer (can track how long an operation takes.
+            console.timeEnd() :- Stops the times that was previously started by console.time() */
+
+            console.time();
+            var number_1 = 10;
+            var number_2 = 20;
+            var addition = number_1 + number_2 ;
+            console.log("Addition = ",addition);
+            console.timeEnd();
+
+        </script>
+    </body>
+</html>

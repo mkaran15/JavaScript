@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Difference between var, let and const. */
+        
+        /* 1. "var" declaration are globally scoped function while "let" and "const" are block scoped" */
+
+        {
+            var name = "karan";
+            console.log(name); //this will print name in the console
+        }
+        console.log(name); //this will print name in the console
+         
+        {
+            let value = 24 ;
+            console.log(value); //this will print value in the console
+        }
+        //console.log(value); //this will give error.
+
+        {
+            const branch = "ECE";
+            console.log(branch); //this will print name in the console
+        }
+        //console.log(branch); //this will give error.
+
+        /*2. "var" variables can be updated and redeclared.
+             "let" variables can be updated but not redeclared.
+             "const" varaibles can neither be updated nor redeclared. */
+        var name = "Karan";
+        console.log(name);
+        name = "Karan Maheshwari" // updated
+        console.log(name);
+        var name = "Milind" // redeclared
+        console.log(name);
+
+        let value = 23;
+        console.log(value);
+        value = 24 //updated
+        console.log(value);
+        //let value = 25; This will give error.
+        //console.log(value);
+
+        const branch = "ECE";
+       // branch = "ME"; This will give error
+       // const branch ="CSE";  This too will result in error
+
+        /*3. While "var" and let can be declared without being initialized during declaration.
+        "const" must be initialed during declaration.*/
+
+        var name;
+        name1 = "karan";
+
+        let age_karan;
+        age1_karan = 23;
+
+        const branch_karan = "ECE";
+        
+        /*const branch_karan;
+        brach_karan = "ECE"; 
+        Note :- This will result in error. */ 
+
+
+    </script>
+</body>
+</html>
