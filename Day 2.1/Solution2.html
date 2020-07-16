@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        /*1. String  Methods */
+
+        var intro = "My name is Karan Maheshwari."
+
+        /*    1. length:- The length property returns the length of a string: 
+        */
+            console.log(intro.length);
+        
+        /*
+            2. indexOf() :- The indexOf() method returns the index of (the position of) the first occurrence of a specified text in a string.
+        */
+            console.log(intro.indexOf("K"));
+            console.log(intro.indexOf("k")); //return -1 if not present.
+        /*
+            2. lastIndexOf() :- The lastIndexOf() method returns the index of the last occurrence of a specified text in a string.
+        */
+            console.log(intro.lastIndexOf("a"));  //return 24
+            console.log(intro.lastIndexOf("an")); //return 14
+            console.log(intro.lastIndexOf("A")); //return -1
+
+            console.log(intro.lastIndexOf("an", 12));//return -1 now.
+            /*The lastIndexOf() methods searches backwards (from the end to the beginning), meaning: if the second parameter is 12, the search starts at position 12, and searches to the beginning of the string.*/
+        /*
+            4. search() :- The search() method searches a string for a specified value and returns the position of the match.
+        */
+            console.log(intro.search("Karan")); //return 11
+        
+        /*
+            The two methods are NOT equal. These are the differences:
+            The search() method cannot take a second start position argument.
+            The indexOf() method cannot take powerful search values (regular expressions).
+       
+        */
+
+        /*
+            5. slice() :- extracts a part of a string and returns the extracted part in a new string.
+            The method takes 2 parameters: the start position, and the end position (end not included).
+        */
+            console.log(intro.slice(11, -1)) //retrun "Karan Maheshwari"
+
+            //If you omit the second parameter, the method will slice out the rest of the string:
+            console.log(intro.slice(0, )) // return the whole string.
+
+        /* Note :- Negative positions do not work in Internet Explorer 8 and earlier. */
+
+        /*
+            6. substring() :- It is similar to slice().
+            The difference is that substring() cannot accept negative indexes.
+        */
+            console.log(intro.substring(11, 24));
+        
+        /*
+            7. substr() is similar to slice().
+            The difference is that the second parameter specifies the length of the extracted part.
+        */
+            console.log(intro.substr(11, 5)) //return Karan
+
+        /*
+            8. replace() :- The replace() method replaces a specified value with another value in a string:
+        */
+            var substring = intro;
+            var newString = substring.replace("Karan", "Yash");
+            console.log(newString);
+
+        /*
+            9. The "trim()" method removes whitespace from both sides of a string:
+        */
+        let name = "   karan   "
+        console.log(name.trim());
+
+        /*
+            10. A string is converted to upper case with toUpperCase().
+            11. A string is converted to lower case with toLowerCase().
+        */
+
+        let mixed = "KaRan MaHeShWaRi";
+        console.log(mixed.toUpperCase()); //KARAN MAHESHWARI
+        console.log(mixed.toLowerCase()); //karan maheshwari
+
+        /*
+            12. concat()  :- joins two or more strings:
+        */
+        var text1 = "Hello";
+        var text2 = "World";
+        var text3 = text1.concat(" ", text2);
+        console.log(text3);
+
+    /* 2. Array Methods */
+        /*
+            1. Converting Array to String :- The JavaScript method toString() converts an array to a string of (comma separated) array values.
+        */
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+            console.log(fruits.toString());
+
+        /*
+            2. The join() method also joins all array elements into a string.
+            It behaves just like toString(), but in addition you can specify the separator:
+        */
+            console.log(fruits.join(" * "));
+        
+        /*
+            3. The pop() method removes the last element from an array:
+
+            4. The push() method adds a new element to an array (at the end):
+        */
+            let friends = ["Karan", "Piyush", "Prateek"];
+            console.log(friends.pop());
+            console.log(friends);
+            friends.push("Milind");
+            console.log(friends);
+
+        /*
+            5. Shifting is equivalent to popping, working on the first element instead of the last.
+            The shift() method removes the first array element and "shifts" all other elements to a lower index.
+        */
+            friends.shift();
+            console.log(friends);
+
+        /*
+            6. The unshift() method adds a new element to an array (at the beginning).
+        */
+            friends.unshift("Karan");
+            console.log(friends);
+
+        /*
+            7. Since JavaScript arrays are objects, elements can be deleted by using the JavaScript operator delete.
+        */
+            delete friends[2];
+            console.log(friends); //Using delete may leave undefined holes in the array. Use pop() or shift() instead.
+
+        /*
+            8. The splice() method can be used to add new items to an array:
+        */
+            friends.splice(2, 3, "Milind", "Rishabh");
+            console.log(friends);
+
+        /*
+            With clever parameter setting, you can use splice() to remove elements without leaving "holes" in the array:
+        */
+            friends.splice(2,3);
+            console.log(friends);
+
+        /*
+            9. The concat() method creates a new array by merging (concatenating) existing arrays
+        */
+
+        let arr1 = [1,2,3];
+        let arr2 = [4,5,6];
+        let arr3 = arr1.concat(arr2);
+        console.log(arr3);
+
+        
+    </script>
+</body>
+</html>
