@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function print(array){
+            for(let y = 0; y<array.length ;y++)
+            if(array[y] == true){
+                console.log(y);
+            }
+        }
+        function bool(array, p){
+            array[p] = true;
+            for(let x = 0; x<array.length; x++){
+                let index = p*p+x*p;
+                if(index < array.length)
+                array[index] = false;
+            }
+            nextPrime(array, p);
+        }
+        function nextPrime(array, previousPrime){
+            let nextP = 0;
+            for(var j = previousPrime+1 ; j<array.length; j++)
+            {
+                if(array[j] != false){
+                nextP = j;
+                break;
+                }
+        
+            }
+            if(j < array.length){
+            bool(array,nextP);
+            }
+            else{
+                print(array);
+            }
+            
+        }
+
+        function prime(number){
+            let array=[];
+            for(var i = 0; i <= number; i++){
+                array[i] = i;
+            }
+            array[0]=array[1] = false;          
+            bool(array,2);  
+            }
+        let number = prompt("Enter number.");
+        if(number >= 2){
+        prime(number);
+        }
+       
+    </script>    
+</body>
+</html>

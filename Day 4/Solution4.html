@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let value = prompt(`Enter 1 for Addition. \nEnter 2 for Substraction. \nEnter 3 for Multiplication. \nEnter 4 for Division, \nEnter 5 for SqareRoot. \n Enter 6 for  Percentage`);
+        if (value < 5 && value > 0){
+            var num1 = prompt("Enter 1st number.");
+            var num2 = prompt("Enter 2nd number.");
+            }else if(value == 5){
+                var num = prompt("Enter number for its SquareRoot.")
+            }
+                else if(value == 6){
+                    var number = prompt("Enter number.");
+                    var percent = prompt("Enter percent.");
+                    var result = number * percent / 100;
+                    }else{
+                        console.error("Invalid input");
+                        }
+
+        switch(+value){
+            case 1 : 
+            console.log(`Addition of ${num1} and ${num2} = ${+num1 + +num2}`)     
+            break;
+            case 2 : 
+            console.log(`Substraction of ${num1} and ${num2} = ${+num1 - +num2}`)     
+            break;
+            case 3 : 
+            console.log(`Multiplication of ${num1} and ${num2} = ${+num1 * +num2}`)     
+            break;
+            case 4 : 
+            console.log(`Division of ${num1} and ${num2} = ${(+num1 / +num2).toFixed(2)}`)     
+            break;
+            case 5 : 
+            console.log(`SqaureRoot of ${num} = ${Math.sqrt(num).toFixed(2)}`)     
+            break;
+            case 6 : 
+            console.log(`${+percent} percent of ${number} is : ${result.toFixed(2)}`);
+            break;
+
+        }
+    </script>    
+</body>
+</html>
