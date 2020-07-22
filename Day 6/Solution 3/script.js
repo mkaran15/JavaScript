@@ -3,6 +3,7 @@ let name = prompt("Enter name.");
 const greet = document.getElementById('wel')
 greet.innerHTML = `Welcome ${name} to Day 6 Assignment`;
 const dmode = document.getElementById('btn');
+
 /*dmode.onclick = function dark(){
     
         document.body.style.backgroundColor = "black";
@@ -21,4 +22,10 @@ attr.onclick = function dark(){
                 attr.classList.add("white");
         }
 }
-
+const ctime = document.getElementById('time');
+function clock(){
+ let today = new Date();
+ let time = today.toLocaleTimeString(); 
+ ctime.innerText = time;      
+}
+setInterval(clock,1000);
