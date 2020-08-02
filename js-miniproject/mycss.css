@@ -1,0 +1,39 @@
+body{
+    background: radial-gradient(blue, lightblue);
+}
+.timer{
+    text-align: center;
+    text-shadow: 2px 2px grey;
+
+}
+
+.parent{
+    border: 3px solid red;
+    margin: auto;
+}
+
+#hms{
+    height:100px;
+}
+
+
+.container{
+    
+    height:120px;
+    width:200px;
+    border: 3px solid black;
+    margin: auto;
+    margin-top:200px;
+    
+
+}
+
+#count{
+    text-align: center;
+    color:orange;
+}
+button{
+    margin-left: 27px;
+}
+
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Stopwatch</title>
+        <link rel="stylesheet" href="mycss.css">
+        
+    </head>
+
+    <body>
+        <h1 class="timer" title="Project of JavaScript">Timer</h1>
+        <hr>
+        <table class="parent">
+            <tr>
+                <td><input type="text" id="hms"  placeholder=" Enter in the format 00:00:00  " style="font-style:italic" class="h" onchange='handler()'/></td>
+                <td><input title="Click to start the timer" type="button" id="dl" value="START" /></td>
+                
+            </tr>
+          
+        </table>
+
+        <div class="container">
+            <h1 id="count">00:00:00</h1>
+            <button title="Pause the timer"onclick="pause()">Pause</button>
+
+            <button title="Click to Resume" onclick="resume()">Resume</button>   
+
+        </div>
+
+ 
+       
+        <script src="karan.js"></script>
+    </body>
+
+</html>
